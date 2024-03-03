@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
 import java.lang.System;
 public class Selenium_calculator {
 	
@@ -18,8 +20,12 @@ public class Selenium_calculator {
 	 @Before
 	  public void setup() {
 		 
-			  System.setProperty("webdriver.gecko.driver","C:\\geckodriver-v0.34.0-win32\\geckodriver.exe");
-		      browser = new FirefoxDriver();
+		 System.setProperty("webdriver.gecko.driver", "C:\\selenium webdriver\\FirefoxDriver\\geckodriver.exe");
+	    	
+			FirefoxOptions options = new FirefoxOptions();
+			options.setBinary("C:\\Program Files\\Mozilla Firefox\\Firefox.exe");
+			
+			browser = new FirefoxDriver(options);
 		  	  browser.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 			  String url="https://testpages.eviltester.com/styled/apps/calculator.html";
 		      browser.get(url);
@@ -40,12 +46,214 @@ public class Selenium_calculator {
 					}
 				
 				browser.findElement(By.id("buttonequals")).click();
-				System.out.println("hello");
+		
 				
 				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
 				System.out.println(result);	
 				String Expected= "3";
 				assertEquals(Expected,result);
 				
+	 		}
+	 
+	 @Test
+		public void Tests2() {
+	    	
+			
+				browser.findElement(By.id("button06")).click();
+				browser.findElement(By.id("buttonminus")).click();
+				browser.findElement(By.id("button01")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
 				
-}}
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "5";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 @Test
+		public void Tests3() {
+	    	
+			
+				browser.findElement(By.id("button09")).click();
+				browser.findElement(By.id("buttonmultiply")).click();
+				browser.findElement(By.id("button09")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "81";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 @Test
+		public void Tests4() {
+	    	
+			
+				browser.findElement(By.id("button09")).click();
+				browser.findElement(By.id("buttondivide")).click();
+				browser.findElement(By.id("button09")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "1";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 
+	 @Test
+		public void Tests5() {
+	    	
+			
+				browser.findElement(By.id("button09")).click();
+				browser.findElement(By.id("buttondivide")).click();
+				browser.findElement(By.id("button00")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "Infinity";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 
+	
+	 @Test
+		public void Tests6() {
+	    	
+				browser.findElement(By.id("button00")).click();
+				browser.findElement(By.id("buttondot")).click();
+				browser.findElement(By.id("button05")).click();
+				browser.findElement(By.id("buttonmultiply")).click();
+				browser.findElement(By.id("button03")).click();
+				
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "1.5";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 
+	 @Test
+		public void Tests7() {
+	    	
+				
+				browser.findElement(By.id("button05")).click();
+				browser.findElement(By.id("buttonmultiply")).click();
+				
+				browser.findElement(By.id("button05")).click();
+				browser.findElement(By.id("buttonclearentry")).click();
+				
+				browser.findElement(By.id("button03")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "15";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 
+	 
+	 
+	 
+	 @Test
+		public void Tests8() {
+	    	
+				
+				browser.findElement(By.id("button05")).click();
+				browser.findElement(By.id("buttonclearentry")).click();
+				
+			;
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 
+	 @Test
+		public void Tests9() {
+	    	
+				
+				browser.findElement(By.id("button08")).click();
+				browser.findElement(By.id("buttonmemoryplus")).click();
+				browser.findElement(By.id("buttonclearentry")).click();
+				browser.findElement(By.id("buttonmemoryrecall")).click();
+				browser.findElement(By.id("buttonclearentry")).click();
+				browser.findElement(By.id("button09")).click();
+				browser.findElement(By.id("buttonmemoryplus")).click();
+				browser.findElement(By.id("buttonclearentry")).click();
+				browser.findElement(By.id("buttonmemoryrecall")).click();
+				
+			;
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "17";
+				assertEquals(Expected,result);
+				
+	 		}
+}
