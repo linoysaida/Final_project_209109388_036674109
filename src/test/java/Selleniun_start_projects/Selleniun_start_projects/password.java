@@ -35,7 +35,7 @@ public class password {
 	  }
 		
 	@Test
-	public void Tests1() {
+	public void Incorrect_characters() {
    	
 		
 			WebElement textBox = browser.findElement(By.name("characters"));
@@ -46,14 +46,16 @@ public class password {
 			String expected="Invalid Value"	;
 			
 			assertEquals(expected, result);
-   }
+	}
 
+	
+	
 	@Test
-	public void Tests2() {
+	public void Good_password_1() {
 	   	
 		
 		WebElement textBox = browser.findElement(By.name("characters"));
-		textBox.sendKeys("G555*hh");
+		textBox.sendKeys("G575*hk");
 		browser.findElement(By.name("validate")).click();
 	
 		String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
@@ -62,11 +64,12 @@ public class password {
 		String expected="Valid Value"	;
 		
 		assertEquals(expected, result);
-}
+	}
+	
 	
 	
 	@Test
-	public void Tests3() {
+	public void Good_password_2() {
 	   	
 		
 		WebElement textBox = browser.findElement(By.name("characters"));
@@ -79,14 +82,17 @@ public class password {
 		String expected="Valid Value"	;
 		
 		assertEquals(expected, result);
-}
+	}
+	
+	
+	
 	
 	@Test
-	public void Tests4() {
+	public void same_character() {
 	   	
 		
 		WebElement textBox = browser.findElement(By.name("characters"));
-		textBox.sendKeys("####");
+		textBox.sendKeys("#######");
 		browser.findElement(By.name("validate")).click();
 	
 		String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
@@ -95,14 +101,16 @@ public class password {
 		String expected="Invalid Value"	;
 		
 		assertEquals(expected, result);
-}
+	}
+	
+	
 	
 	@Test
-	public void Tests5() {
+	public void Short_password () {
 	   	
 		
 		WebElement textBox = browser.findElement(By.name("characters"));
-		textBox.sendKeys("fguyuy");
+		textBox.sendKeys("Kg!8uy");
 		browser.findElement(By.name("validate")).click();
 	
 		String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
@@ -111,5 +119,23 @@ public class password {
 		String expected="Invalid Value"	;
 		
 		assertEquals(expected, result);
-}
+	}
+	
+	
+	
+	@Test
+	public void Long_password () {
+	   	
+		
+		WebElement textBox = browser.findElement(By.name("characters"));
+		textBox.sendKeys("K9&44ggg");
+		browser.findElement(By.name("validate")).click();
+	
+		String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
+		
+		
+		String expected="Invalid Value"	;
+		
+		assertEquals(expected, result);
+	}
 }

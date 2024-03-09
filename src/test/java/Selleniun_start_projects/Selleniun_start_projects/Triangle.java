@@ -39,7 +39,7 @@ public class Triangle {
 	  }
 		
 	@Test
-	public void Tests1() {
+	public void C1FC2FC3FC4F() {
 		
 			WebElement textBox1 = browser.findElement(By.id("side1"));
 			WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -60,7 +60,7 @@ public class Triangle {
 	
 	
 	@Test
-	public void Tests2() {
+	public void C1FC2FC3FC4T() {
 		
 			WebElement textBox1 = browser.findElement(By.id("side1"));
 			WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -77,7 +77,7 @@ public class Triangle {
 			
 	}
 			@Test
-			public void Tests3() {
+			public void C1FC2FC3TC4F() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -97,7 +97,7 @@ public class Triangle {
 			
 			
 			@Test
-			public void Tests4() {
+			public void C1FC2TC3TC4F() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -118,7 +118,7 @@ public class Triangle {
 			
 			
 			@Test
-			public void Tests5() {
+			public void C1TC2FC3FC4F() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -137,7 +137,7 @@ public class Triangle {
 					
     }
 			@Test
-			public void Tests6() {
+			public void C1TC2FC3FC4T() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -155,7 +155,7 @@ public class Triangle {
 			
 			}
 			@Test
-			public void Tests7() {
+			public void C1TC2FC3TC4T() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -175,7 +175,7 @@ public class Triangle {
 			
 			
 			@Test
-			public void Tests8() {
+			public void C1TC2TC3FC4F() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -194,7 +194,7 @@ public class Triangle {
 			}
 			
 			@Test
-			public void Tests9() {
+			public void C1TC2TC3TC4T() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -213,7 +213,7 @@ public class Triangle {
 			}
 			
 			@Test
-			public void Tests10() {
+			public void Side_1_is_not_a_number() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -232,7 +232,7 @@ public class Triangle {
 			}
 			
 			@Test
-			public void Tests11() {
+			public void Side_2_is_not_a_number() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
@@ -251,7 +251,7 @@ public class Triangle {
 			}
 			
 			@Test
-			public void Tests12() {
+			public void Side_3_is_not_a_number() {
 				
 					WebElement textBox1 = browser.findElement(By.id("side1"));
 					WebElement textBox2 = browser.findElement(By.id("side2"));
