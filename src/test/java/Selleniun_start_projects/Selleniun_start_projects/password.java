@@ -35,11 +35,11 @@ public class password {
 	  }
 		
 	@Test
-	public void Incorrect_characters() {
+	public void Incorrect_character() {
    	
 		
 			WebElement textBox = browser.findElement(By.name("characters"));
-			textBox.sendKeys("G66חחחח");
+			textBox.sendKeys("Guuu66ח");
 			browser.findElement(By.name("validate")).click();
 		
 			String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
@@ -88,7 +88,7 @@ public class password {
 	
 	
 	@Test
-	public void same_character() {
+	public void same_character1() {
 	   	
 		
 		WebElement textBox = browser.findElement(By.name("characters"));
@@ -106,11 +106,28 @@ public class password {
 	
 	
 	@Test
+	public void same_character2() {
+	   	
+		
+		WebElement textBox = browser.findElement(By.name("characters"));
+		textBox.sendKeys("BBBBBBB");
+		browser.findElement(By.name("validate")).click();
+	
+		String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
+		
+		
+		String expected="Valid Value"	;
+		
+		assertEquals(expected, result);
+	}
+	
+	
+	@Test
 	public void Short_password () {
 	   	
 		
 		WebElement textBox = browser.findElement(By.name("characters"));
-		textBox.sendKeys("Kg!8uy");
+		textBox.sendKeys("Kg*8uy");
 		browser.findElement(By.name("validate")).click();
 	
 		String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
@@ -128,7 +145,7 @@ public class password {
 	   	
 		
 		WebElement textBox = browser.findElement(By.name("characters"));
-		textBox.sendKeys("K9&44ggg");
+		textBox.sendKeys("K9*544ggg");
 		browser.findElement(By.name("validate")).click();
 	
 		String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
