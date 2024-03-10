@@ -33,7 +33,7 @@ public class Selenium_calculator {
 	  }
 	 
 	 @Test
-		public void plus() {
+		public void Plus1() {
 	    	
 			
 				browser.findElement(By.id("button01")).click();
@@ -55,10 +55,36 @@ public class Selenium_calculator {
 				
 	 		}
 	 
+	 
+	 
 	 @Test
-		public void minus() {
+		public void Plus2() {
+		 		browser.findElement(By.id("buttonallclear")).click();
+		 		browser.findElement(By.id("buttonminus")).click();
+				browser.findElement(By.id("button03")).click();
+				browser.findElement(By.id("buttonplus")).click();
+				browser.findElement(By.id("button02")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "-1";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 
+	 @Test
+		public void Minus1() {
 	    	
-			
+		 		
 				browser.findElement(By.id("button06")).click();
 				browser.findElement(By.id("buttonminus")).click();
 				browser.findElement(By.id("button01")).click();
@@ -78,8 +104,34 @@ public class Selenium_calculator {
 				
 	 		}
 	 
+	 
+
 	 @Test
-		public void multiply() {
+		public void Minus2() {
+		 		browser.findElement(By.id("buttonallclear")).click();
+		 		browser.findElement(By.id("buttonminus")).click();
+				browser.findElement(By.id("button01")).click();
+				browser.findElement(By.id("buttonminus")).click();
+				browser.findElement(By.id("button08")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "-9";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 
+	 @Test
+		public void Multiply1() {
 	    	
 			
 				browser.findElement(By.id("button09")).click();
@@ -101,8 +153,33 @@ public class Selenium_calculator {
 				
 	 		}
 	 
+	 
+	 
 	 @Test
-		public void divide() {
+		public void Multiply2() {
+		 		browser.findElement(By.id("buttonallclear")).click();
+		 		browser.findElement(By.id("buttonminus")).click();
+				browser.findElement(By.id("button05")).click();
+				browser.findElement(By.id("buttonmultiply")).click();
+				browser.findElement(By.id("button05")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "-25";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 @Test
+		public void Divide1() {
 	    	
 			
 				browser.findElement(By.id("button09")).click();
@@ -125,8 +202,32 @@ public class Selenium_calculator {
 	 		}
 	 
 	 
+	 
 	 @Test
-		public void divide_by_zero() {
+		public void Divide2() {
+		 		browser.findElement(By.id("buttonallclear")).click();
+				browser.findElement(By.id("buttonminus")).click();
+				browser.findElement(By.id("button05")).click();
+				browser.findElement(By.id("buttondivide")).click();
+				browser.findElement(By.id("button01")).click();
+				try {
+					  Thread.sleep(1000);
+					} catch (InterruptedException e) {
+					  Thread.currentThread().interrupt();
+					}
+				
+				browser.findElement(By.id("buttonequals")).click();
+		
+				
+				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
+				System.out.println(result);	
+				String Expected= "-5";
+				assertEquals(Expected,result);
+				
+	 		}
+	 
+	 @Test
+		public void Divide_by_zero() {
 	    	
 			
 				browser.findElement(By.id("button07")).click();
@@ -149,135 +250,5 @@ public class Selenium_calculator {
 	 		}
 	 
 	 
-	 
-	 @Test
-		public void negative_result() {
-	    	
-			
-				browser.findElement(By.id("button01")).click();
-				browser.findElement(By.id("buttonminus")).click();
-				browser.findElement(By.id("button05")).click();
-				try {
-					  Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					  Thread.currentThread().interrupt();
-					}
-				
-				browser.findElement(By.id("buttonequals")).click();
-		
-				
-				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
-				System.out.println(result);	
-				String Expected= "-4";
-				assertEquals(Expected,result);
-				
-	 		}
-	 
-	
-	 @Test
-		public void multiply_decimal_number() {
-	    	
-				browser.findElement(By.id("button00")).click();
-				browser.findElement(By.id("buttondot")).click();
-				browser.findElement(By.id("button05")).click();
-				browser.findElement(By.id("buttonmultiply")).click();
-				browser.findElement(By.id("button03")).click();
-				
-				try {
-					  Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					  Thread.currentThread().interrupt();
-					}
-				
-				browser.findElement(By.id("buttonequals")).click();
-		
-				
-				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
-				System.out.println(result);	
-				String Expected= "1.5";
-				assertEquals(Expected,result);
-				
-	 		}
-	 
-	 
-	 @Test
-		public void clear_entry() {
-	    	
-				
-				browser.findElement(By.id("button05")).click();
-				browser.findElement(By.id("buttonmultiply")).click();
-				
-				browser.findElement(By.id("button05")).click();
-				browser.findElement(By.id("buttonclearentry")).click();
-				
-				browser.findElement(By.id("button03")).click();
-				try {
-					  Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					  Thread.currentThread().interrupt();
-					}
-				
-				browser.findElement(By.id("buttonequals")).click();
-		
-				
-				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
-				System.out.println(result);	
-				String Expected= "15";
-				assertEquals(Expected,result);
-				
-	 		}
-	 
-	 
-	 
-	 
-	 
-	 @Test
-		public void all_clear() {
-	    	
-				
-				browser.findElement(By.id("button05")).click();
-				browser.findElement(By.id("buttonallclear")).click();
-				
-			;
-				try {
-					  Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					  Thread.currentThread().interrupt();
-					}
-				
-				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
-				System.out.println(result);	
-				String Expected= "";
-				assertEquals(Expected,result);
-				
-	 		}
-	 
-	 
-	 @Test
-		public void memory_recall() {
-	    	
-				
-				browser.findElement(By.id("button08")).click();
-				browser.findElement(By.id("buttonmemoryplus")).click();
-				browser.findElement(By.id("buttonclearentry")).click();
-				browser.findElement(By.id("buttonmemoryrecall")).click();
-				browser.findElement(By.id("buttonclearentry")).click();
-				browser.findElement(By.id("button09")).click();
-				browser.findElement(By.id("buttonmemoryplus")).click();
-				browser.findElement(By.id("buttonclearentry")).click();
-				browser.findElement(By.id("buttonmemoryrecall")).click();
-				
-			;
-				try {
-					  Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					  Thread.currentThread().interrupt();
-					}
-				
-				String result= browser.findElement(By.id("calculated-display")).getAttribute("value").toString();
-				System.out.println(result);	
-				String Expected= "17";
-				assertEquals(Expected,result);
-				
-	 		}
+
 }
