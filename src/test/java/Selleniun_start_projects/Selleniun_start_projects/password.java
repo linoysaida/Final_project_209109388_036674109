@@ -35,11 +35,11 @@ public class password {
 	  }
 		
 	@Test
-	public void Incorrect_character() {
+	public void Incorrect_character1() {
    	
 		
 			WebElement textBox = browser.findElement(By.name("characters"));
-			textBox.sendKeys("Guuu66ח");
+			textBox.sendKeys("Limor7ח");
 			browser.findElement(By.name("validate")).click();
 		
 			String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
@@ -48,6 +48,35 @@ public class password {
 			assertEquals(expected, result);
 	}
 
+	
+	@Test
+	public void Incorrect_characte2() {
+   	
+		
+			WebElement textBox = browser.findElement(By.name("characters"));
+			textBox.sendKeys("Linoy7$");
+			browser.findElement(By.name("validate")).click();
+		
+			String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
+			String expected="Invalid Value"	;
+			
+			assertEquals(expected, result);
+	}
+	
+	
+	@Test
+	public void Incorrect_character3() {
+   	
+		
+			WebElement textBox = browser.findElement(By.name("characters"));
+			textBox.sendKeys("Rotem3#");
+			browser.findElement(By.name("validate")).click();
+		
+			String result=browser.findElement(By.name("validation_message")).getAttribute("value").toString();
+			String expected="Invalid Value"	;
+			
+			assertEquals(expected, result);
+	}
 	
 	
 	@Test
