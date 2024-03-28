@@ -246,6 +246,7 @@ public class Selenium_calculator {
 				System.out.println(result);	
 				String Expected= "Infinity";
 				assertEquals(Expected,result);
+			
 				
 	 		}
 	 
